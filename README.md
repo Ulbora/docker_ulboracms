@@ -6,11 +6,11 @@ This is Docker Ulbora CMS running on Alpine
 
 # Running
 ```
-docker run --name ulbora-cms --link some-mongodb-container-name:mongo -it  ulboracms sh
+docker run --name ulbora-cms -e DOCKER_ULBORACMS_DATABASE_NAME=some-db-name --link some-mongodb-container-name:mongo -it  ulboracms sh
 ```
-#### or
+#### or as a daemon (suggested)
 ```
-docker run --name ulbora-cms --link some-mongodb-container-name:mongo -d  ulboracms sh
+docker run --name ulbora-cms -e DOCKER_ULBORACMS_DATABASE_NAME=some-db-name --link some-mongodb-container-name:mongo -d  ulboracms sh
 ```
 #Note
 ### The link to your mongodb container should always end with :mongo as shown above
@@ -20,6 +20,6 @@ docker run --name ulbora-cms --link some-mongodb-container-name:mongo -d  ulbora
 
 # Connect to running instance
 ```
-docker exec -it ulboralabs/mongodb-alpine:latest sh
+docker exec -it ulboralabs/ulboracms sh
 ```
 
