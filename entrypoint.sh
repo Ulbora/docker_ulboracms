@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 forever /nodeapps/ulboracms/server.js
-#!/bin/bash
+#!/bin/sh
 
