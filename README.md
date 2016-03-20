@@ -6,13 +6,17 @@ This is Docker Ulbora CMS running on Alpine
 
 # Running
 ```
-docker run -p some-port:8080 --name ulbora-cms --env DOCKER_ULBORACMS_DATABASE_NAME=some-db-name \
---link some-mongodb-container-name:mongo -it  ulboralabs/ulboracms sh
+docker run -p some-port:8080 --name ulbora-cms \
+--env DOCKER_ULBORACMS_DATABASE_NAME=some-db-name \
+--link some-mongodb-container-name:mongo -it  \
+ulboralabs/ulboracms sh
 ```
 #### or as a daemon (suggested)
 ```
-docker run -p some-port:8080 --name ulbora-cms --env DOCKER_ULBORACMS_DATABASE_NAME=some-db-name \
---link some-mongodb-container-name:mongo -d  ulboralabs/ulboracms sh
+docker run -p some-port:8080 --name ulbora-cms \
+--env DOCKER_ULBORACMS_DATABASE_NAME=some-db-name \
+--link some-mongodb-container-name:mongo -d  \
+ulboralabs/ulboracms sh
 ```
 # Note
 ### The link to your mongodb container should always end with :mongo as shown above
