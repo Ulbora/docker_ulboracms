@@ -20,6 +20,8 @@ docker run -p some-port:8080 --name ulbora-cms --env DOCKER_ULBORACMS_DATABASE_N
 --link some-mongodb-container-name:mongo 
 ```
 ### Ports should be different for each Ulbora CMS container
+#### Example: 
+#### -p host-port-number:container-port-number
 ```
 -p 3001:8080 
 -p 3002:8080 
