@@ -1,5 +1,6 @@
 # Docker Ulbora CMS
-- 1.0.0, latest[ (Dockerfile)](https://github.com/Ulbora/docker_ulboracms/blob/master/Dockerfile)
+- 2.1.5, latest[ (Dockerfile)](https://github.com/Ulbora/docker_ulboracms/blob/master/Dockerfile)
+- 1.0.0 
 
 This is Docker Ulbora CMS running on Alpine
 
