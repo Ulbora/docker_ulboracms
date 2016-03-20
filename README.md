@@ -19,7 +19,12 @@ docker run -p some-port:8080 --name ulbora-cms --env DOCKER_ULBORACMS_DATABASE_N
 ```
 --link some-mongodb-container-name:mongo 
 ```
-### Ports should be different for each Ulbora CMS container
+The :mongo is an alias that produces an environment variable named MONGO_PORT_27017_TCP_ADDR inside the web container.
+If :mongo were to be changed to :mongodb, then the environment variable would be named MONGODB_PORT_27017_TCP_ADDR and 
+Ulbora CMS would not connect the the mongo database. Ulbora CMS needs the environment variable to be 
+named MONGO_PORT_27017_TCP_ADDR.
+
+### Ports on the host machine should be different for each Ulbora CMS container
 #### Example: 
 #### -p host-port-number:container-port-number
 ```
